@@ -93,7 +93,7 @@
 #define SERIAL_BAUD 115200
 #define DATA_ATUAL  "08/04/2018"  // MODIFICAR p/ DATA ULTIMA ATUALIZACAO
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-
+unsigned times = 0;
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // constants won't change. Used here to set a pin number :
 //const int ledPin =  LED_BUILTIN;// the number of the LED pin
@@ -108,21 +108,27 @@
 // FUNCTION SHOW READER ALL I/O STATES IN THIS TIME
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // FIRST OF ALL READ ALL GPIO I/O
-void IoNowState(){
-Serial.println("| PC_LON | PC_PWR | PC_RST | LD_GRN | LD_RED |");
+void IoNowState(){ times++;
+Serial.print("| PC_LON | PC_PWR | PC_RST | LD_GRN | LD_RED  | ");
+Serial.println(times);
 Serial.print("| ");
-Serial.print(digitalRead(PC_LON)); Serial.print(" | ");
-Serial.print(digitalRead(PC_PWR)); Serial.print(" | ");
-Serial.print(digitalRead(PC_RST)); Serial.print(" | ");
-Serial.print(digitalRead(LD_GRN)); Serial.print(" | ");
-Serial.print(digitalRead(LD_RED)); Serial.print(" |");}
+Serial.print(digitalRead(PC_LON)); Serial.print("\t | ");
+Serial.print(digitalRead(PC_PWR)); Serial.print("\t  | ");
+Serial.print(digitalRead(PC_RST)); Serial.print("\t   | ");
+Serial.print(digitalRead(LD_GRN)); Serial.print("\t    | ");
+Serial.print(digitalRead(LD_RED)); Serial.println("\t      |");}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // SETUP - ALL SETTINGS
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 void setup() {
 Serial.begin(SERIAL_BAUD);
-Serial.print("\n WI-FI POWER ON OFF RESET - PO2R - Versao: ");
-Serial.println(DATA_ATUAL);
+Serial.println("\n| - - - - - - - - - - - - - - - - - - - - - - |");
+Serial.println("| WI-FI POWER ON OFF RESET - REMOTE SYSTEM!   |");
+Serial.println("| IDEALIZADO POR MARCUS!                      |");
+Serial.println("| VERSAO INICIAL - ABR/2018!                  |");
+Serial.println("| - - - - - - - - - - - - - - - - - - - - - - |");
+Serial.print("| WPO2R - Rev.: 1 - Versao: "); 
+Serial.print(DATA_ATUAL); Serial.println("        |");
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 //  ESP8266 - SPECIFICS
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -163,9 +169,29 @@ previousMillis = currentMillis; // if the LED is off turn it on and vice-versa:
     digitalWrite(LD_RED, ledState);
 } //  END - ELAPSED TIME WITHOUT DELAY 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+digitalWrite(LD_RED, LOW);  // LD_RED ON
+delay(150);
 digitalWrite(LD_GRN, HIGH);  // LD_GRN OFF
-digitalWrite(LD_RED, HIGH);  // LD_GRN OFF
-delay(1500);
+IoNowState(); delay(1500); 
+digitalWrite(LD_RED, HIGH);  // LD_RED ON
+delay(150);
+digitalWrite(LD_GRN, LOW);  // LD_GRN OFF
+IoNowState(); delay(1500);
+// SAIDAS DIGITAIS
+digitalWrite(PC_PWR, LOW);  // PC_PWR OFF
+digitalWrite(PC_RST, LOW);  // PC_RST OFF
+Serial.println("| - - - - - - - - - - - - - - - - - - - - - - |");
+Serial.println("| PC_PWR >--> NLS [1] - - - - - - - - - - - - |");
+Serial.println("| PC_RST >--> NLS [1] - - - - - - - - - - - - |");
+Serial.println("| - - - - - - - - - - - - - - - - - - - - - - |");
+IoNowState(); delay(1500);
+digitalWrite(PC_PWR, HIGH);  // PC_PWR ON
+digitalWrite(PC_RST, HIGH);  // PC_RST ON
+Serial.println("| - - - - - - - - - - - - - - - - - - - - - - |");
+Serial.println("| PC_PWR >--> NLI [0] - - - - - - - - - - - - |");
+Serial.println("| PC_RST >--> NLI [0] - - - - - - - - - - - - |");
+Serial.println("| - - - - - - - - - - - - - - - - - - - - - - |");
+IoNowState(); delay(1500);
 } // END MAIN LOOP!
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // END

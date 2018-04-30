@@ -1,8 +1,3 @@
-// VERSAO PARA TESTES - NAO COMPATIVEL COM SISTEMA DO OLIVO
-// >--> TEMPO ENTRE MEDIDAS CONSECUTIVAS 1 MINUTO!
-// intervalo = 60000; // TEMPO DE SUBIDA PARA TESTES DE SENSORES BME280
-// VERSAO 2 - TAVARES - LED1 MUDOU PARA ATL-5 ANTES ERA LED0 NO ATL-3
-// VERSAO PARA TESTES NO SISTEMA ANTIGO DO RPi - LINUX/APACHE/MYSQL/PHP
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* https://github.com/esp8266/Arduino
 Arduino core for ESP8266 WiFi chip This project brings support for 
@@ -107,6 +102,7 @@ SD0         choix de l’adresse I2C. Si SD0 = 0, alors l’adresse est 0x76,
 #define      WIFI_SSID     "ATLRPi"   // NOME DA INTERNET DO RASPBERRY-PI
 #define      WIFI_PASSWORD "agrotechlinkPI2017"      // SENHA DA INTERNET
 BME280_I2C   bme(0x76);                         // I2C using address 0x76
+#define SERIAL_BAUD 115200
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // USAR: CSB = 1 >--> I2C  |  SDO = 0 >--> 0x76 >--> DEFAULT ON BOARD
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -143,6 +139,12 @@ MySQL_Connection conn((Client *)&client);
 // PRESSAO, UMIDADE E TEMPERATURA >>-->> BME280 >------------> NOVO 041117
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 void setup() {
+Serial.begin(SERIAL_BAUD);
+Serial.println("| - - - - - - - - - - - - - - - - - - |");
+Serial.println("| POWER ON OFF RESET REMOTE SYSTEM!   |");
+Serial.println("| IDEALIZADO POR MARCUS!              |");
+Serial.println("| VERSAO INICIAL - ABR/2018!          |");
+Serial.println("| - - - - - - - - - - - - - - - - - - |");
   pinMode(ATL5, OUTPUT);     digitalWrite(ATL5, HIGH);   // GPIO-16 + LED0 / INICIA HIGH E TERMINA SETUP LOW
   pinMode(ATL4, OUTPUT);     digitalWrite(ATL4, HIGH);   // GPIO-15 + ESTADO NORMAL DO ESP / HIGH
   pinMode(ATL9, OUTPUT);     digitalWrite(ATL9, HIGH);   // GPIO-02 + ESTADO NORMAL DO ESP / HIGH
