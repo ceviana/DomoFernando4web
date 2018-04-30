@@ -91,7 +91,7 @@
 #define      ATL9          2         // GPIO-02 + LED NATIVO DO ESP8266 / PERMITE ROTINAS E RESTART
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 #define SERIAL_BAUD 115200
-#define DATA_ATUAL  "08/04/2018"  // MODIFICAR p/ DATA ULTIMA ATUALIZACAO
+#define DATA_ATUAL  "30/04/2018"  // MODIFICAR p/ DATA ULTIMA ATUALIZACAO
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 unsigned times = 0;
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -105,9 +105,34 @@ unsigned times = 0;
 // constants won't change :
 // const long interval = 1000;           // interval at which to blink (milliseconds)
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FUNCTION SHOW READER ALL I/O STATES IN THIS TIME
+// FUNCTION RESET PC
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FIRST OF ALL READ ALL GPIO I/O
+void ResetPC(){
+Serial.print("PC_RST STATE: "); Serial.println(digitalRead(PC_RST)); 
+/* 
+
+PC_RST = 1;
+PC_RST = 0;
+*/
+
+Serial.print("PC_RST STATE: "); Serial.println(digitalRead(PC_RST));
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION POWER OFF PC
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void PoweroffPC(){
+Serial.print("PC_PWR STATE: "); Serial.println(digitalRead(PC_PWR));
+/* PC_PWR = 1;
+PC_PWR = 0;
+*/
+
+Serial.print("PC_PWR STATE: "); Serial.println(digitalRead(PC_PWR));
+
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION SHOW READER ALL I/O STATES AT THIS TIME
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FIRST OF ALL READ ALL GPIO
 void IoNowState(){ times++;
 Serial.print("| PC_LON | PC_PWR | PC_RST | LD_GRN | LD_RED  | ");
 Serial.println(times);
@@ -143,9 +168,6 @@ pinMode(PC_PWR, OUTPUT);        //digitalWrite(PC_PWR, LOW);  // PC_PWR OFF
 pinMode(PC_RST, OUTPUT);        //digitalWrite(PC_RST, LOW);  // PC_RST OFF
 pinMode(LD_GRN, OUTPUT);        //digitalWrite(LD_GRN, LOW);  // LD_GRN OFF
 pinMode(LD_RED, OUTPUT);        //digitalWrite(LD_RED, LOW);  // LD_GRN OFF
-// set the digital pin as output:
-//pinMode(ledPin, OUTPUT);   digitalWrite(ledPin, HIGH);  // LED_BUILTIN OFF
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 }   // END SETUP
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // LOOP
