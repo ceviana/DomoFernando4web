@@ -22,11 +22,11 @@ it is accesible on the URL you've set in firmware.ino. */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 #define USE_SERIAL Serial
 // How long the PowerOFF button should be pressed to power off PC forcefully
-#define PWR_OFF_TIME 4500
+#define PWR_OFF_TIME        4500
 // How long the button should be pressed to REBOOT, POWER ON or RESET
-#define PUSH_TIME 400
+#define PUSH_TIME           400
 // How often the tasks server should be polled, ms
-#define POLL_INTERVAL 20000
+#define POLL_INTERVAL       20000
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // DEFINES ALL NEEDED I/O PINS
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -46,8 +46,10 @@ it is accesible on the URL you've set in firmware.ino. */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // Wi-Fi network settings
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-const char* ssid = "ESP_GUEST";
-const char* password = "01234567890";
+//const char* ssid = "ESP_GUEST";
+//const char* password = "01234567890";
+const char* ssid = "VIANA";
+const char* password = "15373420883";
 // URL to task providing script, that will be polled each POLL_INTERVAL ms.
 // The endpoint script should return one of the following strings as plain text
 // in order to execute desired actions: PWR_ON, PWR_OFF, RESET, SHUTDOWN
@@ -126,6 +128,9 @@ void pollTasks() { times++;
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 bool isPoweredOn() {
   return digitalRead(STATUS_PIN);}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION TO POWER OFF PC
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 void do_powerOff() {
   if (!isPoweredOn()) {
     Serial.println("|> System is already off. Skipping task.");
