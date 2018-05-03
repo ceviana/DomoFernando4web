@@ -1,0 +1,129 @@
+03.05.2018 00:51:50 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:52:10 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:52:30 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:52:51 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:53:11 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:53:31 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:53:51 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:54:12 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:54:32 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:54:52 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:55:12 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:55:32 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:55:55 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:56:17 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:56:37 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:56:57 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:57:18 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:57:38 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:57:58 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:58:19 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:58:39 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:58:59 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:59:19 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 00:59:39 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:00:00 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:00:20 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:00:40 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:01:01 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:01:21 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:01:41 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:02:01 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:02:22 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:02:42 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:03:02 - debug - array (
+  'estado' => 'OFF',
+)
+03.05.2018 01:06:43 - debug - array (
+  'estado' => 'ON',
+)
+03.05.2018 01:07:06 - debug - array (
+  'estado' => 'ON?estado=ON',
+)
+03.05.2018 01:07:28 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON',
+)
+03.05.2018 01:07:48 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON?estado=ON',
+)
+03.05.2018 01:08:09 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON?estado=ON?estado=ON',
+)
+03.05.2018 01:08:29 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON',
+)
+03.05.2018 01:08:49 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON',
+)
+03.05.2018 01:09:09 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON',
+)
+03.05.2018 01:09:29 - debug - array (
+  'estado' => 'ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON?estado=ON',
+)

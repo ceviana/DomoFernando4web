@@ -81,8 +81,8 @@
 #define      PWR_PIN      14    // Pin for the PWR signal line
 #define      RST_PIN      12    // Pin for the RST signal line
 #define      STATUS_PIN   16    // Pin for the status LED signal line
-#define      LD_GRN        5    // GPIO-11  LD0 >--> LED GREEN - PO2
-#define      LD_RED       13    // GPIO-13  LD1 >----> LED RED - PO2
+#define      LD_GRN       13    // GPIO-11  LD0 >--> LED GREEN - PO2
+#define      LD_RED        5    // GPIO-13  LD1 >----> LED RED - PO2
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // DEFINES TIMES TO TASKS
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -103,8 +103,13 @@
 //const char* password = "01234567890";
 const char* ssid = "VIANA";
 const char* password = "15373420883";
+// URL to task providing script, that will be polled each POLL_INTERVAL ms.
+// The endpoint script should return one of the following strings as plain text
+// in order to execute desired actions: PWR_ON, PWR_OFF, RESET, SHUTDOWN
+// const char*  // old
+String endpoint = "http://ceviana.com/pc-power/endpoint.php";
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-unsigned times = 0;
+unsigned times = 0;   //  counter times var
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // constants won't change. Used here to set a pin number :
 //const int ledPin =  LED_BUILTIN;// the number of the LED pin
@@ -112,96 +117,54 @@ unsigned times = 0;
 // int ledState = HIGH ;             // ledState used to set the LED
 // Generally, you should use "unsigned long" for variables that hold time
 // The value will quickly become too large for an int to store
-// unsigned long previousMillis = 0;        // will store last time LED was updated
+// unsigned long previousMillis = 0;// will store last time LED was updated
 // constants won't change :
-// const long interval = 1000;           // interval at which to blink (milliseconds)
-
-
-int period = 1000;    // time to wait
-unsigned long time_now = 0;
- 
-unsigned long lastPass = 0;
-//int state = 0;
+// const long interval = 1000;// interval at which to blink (milliseconds)
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // FUNCTION TIME WITHOUT DELAY FUNCTION
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-void PassTime(unsigned msecs){
-    time_now = millis();
-//    Serial.println("Hello");
-    while(millis() < time_now + msecs){ //wait approx. [period] ms
-    }
-
-
-
-  
-    //if (millis() > lastPass) {
+void PassTime(unsigned msecs){}
 //      lastPass = millis() + 5000UL;
 /* The "UL" after the number is a syntax detail that is important when 
 dealing with large numbers in millis and micros, therefore it is shown
 although this is pseudo code. */
-    }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 unsigned short Xled = 0;  // LED BLINK TIMES COUNTER
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // FUNCTION BLINK TOGGLE RED LED
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 void TgglBlnkLed(short LedColour, short xTimes, short dlTime){
-/*  LedColour   >-->   0 = RED; 1 = GREEN; 2 = RED + GREEN
+/*  LedColour   >-->   0 = RED; 1 = GREEN; 2 = RED + GREEN 
+ *                     3 = TOGGLES RED; 4 TOGGLES GREEN
  *  xTimes      >-->   TIMES TO BLINK
     dlTime      >-->   NLS TIME LED  */
-for (Xled = 0; Xled < xTimes; Xled++){
 switch (LedColour){
-case 0: { digitalWrite(LD_RED, HIGH); 
-          delay(dlTime); //PassTime(dlTime); 
+case 0: { for (Xled = 0; Xled < xTimes; Xled++){
+          digitalWrite(LD_RED, HIGH); 
+          delay(dlTime);
           digitalWrite(LD_RED, LOW);  
-          delay(dlTime/3); //PassTime(dlTime / 3); 
-          break;} 
-case 1: { digitalWrite(LD_GRN, HIGH); 
+          delay(dlTime / 4);
+          }break;}  
+case 1: { for (Xled = 0; Xled < xTimes; Xled++){
+          digitalWrite(LD_GRN, HIGH); 
           delay(dlTime); //PassTime(dlTime); 
           digitalWrite(LD_GRN, LOW);  
-          delay(dlTime/3); //PassTime(dlTime / 3); 
-          break;} 
-case 2: { digitalWrite(LD_RED, HIGH); digitalWrite(LD_GRN, HIGH); 
+          delay(dlTime / 4);
+          } break;} 
+case 2: { for (Xled = 0; Xled < xTimes; Xled++){
+          digitalWrite(LD_RED, HIGH); digitalWrite(LD_GRN, HIGH); 
           delay(dlTime); //PassTime(dlTime); 
           digitalWrite(LD_RED, LOW);  digitalWrite(LD_GRN, LOW); 
-          delay(dlTime/3); //PassTime(dlTime / 3); 
-          break;}}}}
+          delay(dlTime / 4);
+          } break;}  
+case 3: { digitalWrite(LD_RED, !digitalRead(LD_RED)); break;}
+case 4: { digitalWrite(LD_GRN, !digitalRead(LD_GRN)); break;}
+case 5: { digitalWrite(LD_RED, LOW); digitalWrite(LD_GRN, LOW); break;}
+case 6: { digitalWrite(LD_RED, HIGH); digitalWrite(LD_GRN, LOW); break;}
+case 7: { digitalWrite(LD_RED, LOW); digitalWrite(LD_GRN, HIGH); break;}
+case 8: { digitalWrite(LD_RED, HIGH); digitalWrite(LD_GRN, HIGH); break;}}}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FUNCTION BLINK TOGGLE GREEN LED
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-void ToggleGreenLed(){
-digitalWrite(LD_GRN, HIGH);  // LD_GRN OFF
-digitalWrite(LD_GRN, LOW);  // LD_GRN OFF
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FUNCTION BLINK TOGGLE RED AND GREEN LEDs
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-void ToggleRdGrLed(){
-
-digitalWrite(LD_RED, LOW);  // LD_RED ON
-digitalWrite(LD_GRN, HIGH);  // LD_GRN OFF
-digitalWrite(LD_RED, HIGH);  // LD_RED ON
-digitalWrite(LD_GRN, LOW);  // LD_GRN OFF
-
-}
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FUNCTION RESET PC
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-void doResetPC(){
-digitalWrite(RST_PIN, HIGH);
-Serial.print("PC_RST STATE: "); Serial.println(digitalRead(RST_PIN)); 
-delay(PUSH_TIME); digitalWrite(RST_PIN, LOW);
-Serial.print("PC_RST STATE: "); Serial.println(digitalRead(RST_PIN)); }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FUNCTION POWER OFF PC
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-void doPoweroffPC(){
-digitalWrite(PWR_PIN, HIGH);
-Serial.print("PC_PWR STATE: "); Serial.println(digitalRead(PWR_PIN));
-delay(PWR_OFF_TIME); digitalWrite(PWR_PIN, LOW);
-Serial.print("PC_PWR STATE: "); Serial.println(digitalRead(PWR_PIN)); }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// FUNCTION SHOW READER ALL I/O STATES AT THIS TIME
+// FUNCTION SHOW READ ALL I/O STATES AT THIS TIME
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // FIRST OF ALL READ ALL GPIO
 void IoNowState(){ times++;
@@ -249,6 +212,114 @@ pinMode(LD_GRN, OUTPUT);       //digitalWrite(LD_GRN, LOW);  // LD_GRN OFF
 pinMode(LD_RED, OUTPUT);       //digitalWrite(LD_RED, LOW);  // LD_GRN OFF
 }   // END SETUP
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION TO SHUTDOWN PC IF IT IS ON - TOQUE RAPIDO NO INTERRUPTOR
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void do_shutdown() {
+if (!isPoweredOn()) {
+Serial.println("|> PC JA SE ENCONTRA DESLIGADO. TAREFA NAO REALIZADA!");
+TgglBlnkLed(0, 5, 400); 
+return;}
+digitalWrite(PWR_PIN, HIGH);
+Serial.print("ESTADO PC_PWR: "); Serial.println(digitalRead(PWR_PIN));
+delay(PUSH_TIME); digitalWrite(PWR_PIN, LOW);
+Serial.print("ESTADO PC_PWR: "); Serial.println(digitalRead(PWR_PIN)); 
+TgglBlnkLed(1, 5, 400);
+Serial.println("|> COMANDO PARA SHUTDOWN PC FOI ENVIADO!");
+reportStatus();}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION TO POWER ON PC IF IT IS NOT
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void do_powerOn() {
+  if (isPoweredOn()) {
+    Serial.println("|> PC ESTA LIGADO. TAREFA NAO REALIZADA!");
+    TgglBlnkLed(0, 5, 400);
+    return;}
+digitalWrite(PWR_PIN, HIGH);
+Serial.print("ESTADO PC_PWR: "); Serial.println(digitalRead(PWR_PIN));
+delay(PUSH_TIME); digitalWrite(PWR_PIN, LOW);
+Serial.print("ESTADO PC_PWR: "); Serial.println(digitalRead(PWR_PIN)); 
+TgglBlnkLed(1, 5, 400);
+Serial.println("|> COMANDO PARA RELIGAR PC FOI ENVIADO!");
+reportStatus();}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION POWER OFF PC - SEGURA O INTERRUPTOR - FORCA DESLIGAMENTO
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void do_powerOff(){Serial.print("> - - - - - - > ");  Serial.println(times);
+TgglBlnkLed(0, 5, 400);
+  if (!isPoweredOn()) {
+    Serial.println("|> PC JA SE ENCONTRA DESLIGADO. TAREFA NAO REALIZADA!");
+    TgglBlnkLed(1, 5, 400); return;}
+digitalWrite(PWR_PIN, HIGH);
+Serial.print("ESTADO PC_PWR : "); Serial.println(digitalRead(PWR_PIN));
+delay(PWR_OFF_TIME); digitalWrite(PWR_PIN, LOW);
+Serial.print("ESTADO PC_PWR: "); Serial.println(digitalRead(PWR_PIN)); 
+TgglBlnkLed(2, 5, 400);
+Serial.println("|> COMANDO PARA DESLIGAR PC FOI ENVIADO!");
+reportStatus();}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION TO VERIFY THAT PC IS POWERED ON OR NOT
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+bool isPoweredOn() {
+  return digitalRead(STATUS_PIN);}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION TO SEND REPORT STATUS
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void reportStatus() {
+  Serial.print("|> ESTADO DO PC: power ");
+  if (isPoweredOn()) {
+    Serial.println("LIGADO"); TgglBlnkLed(6, 0, 0);
+  } else {
+    Serial.println("DESLIGADO"); TgglBlnkLed(7, 0, 0);}}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION TO RESET PC IF IT IS ON
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void do_reset() {Serial.print("> - - - - - - > ");  Serial.println(times);
+TgglBlnkLed(3, 0, 0); 
+  if (!isPoweredOn()) {
+    Serial.println("|> PC DESLIGADO. TAREFA NAO REALIZADA!");}
+digitalWrite(RST_PIN, HIGH);
+Serial.print("ESTADO PC_RST: "); Serial.println(digitalRead(RST_PIN)); 
+delay(PUSH_TIME); digitalWrite(RST_PIN, LOW);
+Serial.print("ESTADO PC_RST: "); Serial.println(digitalRead(RST_PIN)); 
+TgglBlnkLed(3, 0, 0);
+Serial.println("|> COMANDO DE RESET PC FOI ENVIADO!");
+reportStatus();}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+// FUNCTION POOLTASKS
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+void pollTasks() { times++;
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.print("|> Wi-Fi NAO ESTA CONECTADO. NAO E POSSIVEL VERIFICAR TAREFAS!\n");}
+  HTTPClient http;
+// ENVIANDO SITUACAO DE LIGADO OU DESLIGADO PARA O SERVIDOR
+String _comando = endpoint;
+  _comando += "?estado=";
+  if(isPoweredOn()){
+  _comando += "ON";}
+  else {_comando += "OFF";}
+  http.begin(_comando);
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"); 
+  char request[64];
+  snprintf(request, sizeof request, "status=%d", isPoweredOn());
+  int httpCode = http.POST(request);
+  Serial.printf("|> [HTTP] POST success. Code: %d\n", httpCode);
+  Serial.printf("|> Number of resquests: %d\n", times); 
+  if (httpCode != HTTP_CODE_OK) {
+    Serial.printf("|> [HTTP] POST failed, error: %s\n", http.errorToString(httpCode).c_str());
+    http.end();
+    return;}
+  String payload = http.getString();
+  Serial.print("|>----->  ");
+  Serial.println(payload);
+  if (payload == "PWR_OFF") {
+    do_powerOff();
+  } else if (payload == "PWR_ON") {
+    do_powerOn();
+  } else if (payload == "SHUTDOWN") {
+    do_shutdown();
+  } else if (payload == "RESET") {
+    do_reset();} http.end();}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // LOOP
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 void loop() { //IoNowState();
@@ -270,33 +341,20 @@ previousMillis = currentMillis; // if the LED is off turn it on and vice-versa:
     digitalWrite(LD_RED, ledState);
 } //  END - ELAPSED TIME WITHOUT DELAY 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-//TgglBlnkLed(0, 2, 900);
+/*TgglBlnkLed(0, 5, 400);
 // void TgglBlnkLed(short LedColour, short xTimes, short dlTime){
-//TgglBlnkLed(1, 2, 600);
-//delay(1500);
-digitalWrite(LD_RED, HIGH);  // LD_RED ON
-PassTime(1500);
+TgglBlnkLed(1, 5, 400);
+TgglBlnkLed(2, 1, 1500);
+TgglBlnkLed(5, 0, 0); 
+//delay(500);
+doResetPC(); //IoNowState();
+doPoweroffPC(); //IoNowState();
+//times++;*/
 
 
-
-    //if (millis() > lastPass) {lastPass = millis() + 5000UL;}
-
-digitalWrite(LD_RED, LOW);  // LD_RED ON
-PassTime(500);
-
-
-
-
-
-
-//TgglBlnkLed(2, 2, 1500);
-
-//delay(1500);
-
-
-//IoNowState(); 
-//delay(1500);
-
+delay(POLL_INTERVAL);
+reportStatus();
+pollTasks();
 
 
 } // END MAIN LOOP!
