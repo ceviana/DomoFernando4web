@@ -1,5 +1,19 @@
 <?php
-echo nl2br("\nPO2R - POWER ON OFF RESET PC\n\n");
+//echo nl2br("\n\nRESPOSTA\n");
+/*file_put_contents('log.txt', date('d.m.Y H:i:s') . ' - ' . var_export($_POST, true) . "\n", FILE_APPEND);
+$task = file_get_contents('task.txt');
+echo $task;
+if ($task !== 'OK') {
+    file_put_contents('task.txt', 'OK');}
+if ($task !== 'RESET') {
+    file_put_contents('task.txt', 'RESET');}
+if ($task !== 'PWR_ON') {
+    file_put_contents('task.txt', 'PWR_ON');}
+if ($task !== 'PWR_OFF') {
+    file_put_contents('task.txt', 'PWR_OFF');}
+if ($task !== 'SHUTDOWN') {
+    file_put_contents('task.txt', 'SHUTDOWN');}
+*/
 
 echo
 "<form action='saveTask.php#' method='post'>
@@ -26,7 +40,7 @@ echo
 <input type='submit' name='task' value='SHUTDOWN' />
 </form>";
 
-echo nl2br("\nTAREFA PC\n");
+echo nl2br("\nTAREFA\n");
 /*if(isset($_POST['OK'])) {	echo "OK ";}
 if(isset($_POST['RESET'])){	echo "RESET ";}
 if(isset($_POST['PWR_ON'])) {	echo "PWR_ON ";}
@@ -36,7 +50,7 @@ if(isset($_POST['SHUTDOWN'])) {	echo "SHUTDOWN ";}*/
 if(isset($_GET['task'])) {	echo $_GET['task'];}
 //else { echo "aqui000!";}
 
-echo nl2br("\n\nULTIMO ESTADO PC\n");
+echo nl2br("\n\nESTADO\n");
 $estado = file_get_contents('debug.txt');
 echo $estado;
 

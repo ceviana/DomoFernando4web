@@ -99,6 +99,8 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // Wi-Fi network settings
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+//const char* ssid = "DARK2";
+//const char* password = "2003311200300";
 //const char* ssid = "ESP_GUEST";
 //const char* password = "01234567890";
 const char* ssid = "VIANA";
@@ -180,6 +182,10 @@ Serial.print(digitalRead(LD_RED)); Serial.println("\t      |");}
 // SETUP - ALL SETTINGS
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 void setup() {
+//  pinMode(ATL5, OUTPUT);     digitalWrite(ATL5, HIGH);   // GPIO-16 + LED0 / INICIA HIGH E TERMINA SETUP LOW
+  pinMode(ATL4, OUTPUT);     digitalWrite(ATL4, HIGH);   // GPIO-15 + ESTADO NORMAL DO ESP / HIGH
+  pinMode(ATL9, OUTPUT);     digitalWrite(ATL9, HIGH);   // GPIO-02 + ESTADO NORMAL DO ESP / HIGH
+
 Serial.begin(SERIAL_BAUD);
 Serial.setDebugOutput(true);
 Serial.println();

@@ -1,0 +1,777 @@
+03.05.2018 00:29:20 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:29:44 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:30:06 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:30:29 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:30:53 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:31:16 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:31:39 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:32:02 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:32:24 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:32:38 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:32:41 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:32:47 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:33:07 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:33:27 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:33:28 - saveTask - array (
+  'task' => 'PWR_ON',
+)
+03.05.2018 00:33:48 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:34:11 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:34:35 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:34:58 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:35:13 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:35:20 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:35:40 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:35:53 - saveTask - array (
+  'task' => 'RESET',
+)
+03.05.2018 00:36:01 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:36:21 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:36:42 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:37:03 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:37:11 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:37:23 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:37:40 - saveTask - array (
+  'task' => 'PWR_OFF',
+)
+03.05.2018 00:37:45 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:38:15 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:38:40 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:39:05 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:39:31 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:39:56 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:40:21 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:40:46 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:41:11 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:41:37 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:42:02 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:42:27 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:42:38 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:42:46 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:42:47 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:42:47 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:42:47 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:42:47 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:42:52 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:43:13 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:43:33 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:43:53 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:44:08 - saveTask - array (
+  'task' => 'PWR_ON',
+)
+03.05.2018 00:44:14 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 00:44:26 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:44:37 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:44:57 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:45:17 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:45:37 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:45:58 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:46:18 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:46:38 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:46:58 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:47:18 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:47:40 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:48:01 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:48:21 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:48:42 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:49:02 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:49:22 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:49:43 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:50:03 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:50:24 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:50:44 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:51:50 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:52:10 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:52:30 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:52:51 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:53:11 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:53:31 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:53:51 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:54:07 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 00:54:12 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:54:32 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:54:52 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:55:12 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:55:32 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:55:55 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:56:17 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:56:37 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:56:58 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:57:18 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:57:38 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:57:58 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:58:19 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:58:39 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:58:59 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:59:19 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 00:59:39 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:00:00 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:00:20 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:00:40 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:01:01 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:01:21 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:01:41 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:02:01 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:02:22 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:02:42 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:03:02 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:06:43 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:07:06 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:07:28 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:07:48 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:08:09 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:08:29 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:08:49 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:09:09 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:09:30 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:10:48 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:11:00 - saveTask - array (
+  'task' => 'SHUTDOWN',
+)
+03.05.2018 01:11:10 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:11:33 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:11:36 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:11:54 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:11:56 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:12:16 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:12:36 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:12:56 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:13:16 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:13:37 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:13:57 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:14:17 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:14:37 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:14:58 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:15:18 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:15:39 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:15:59 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:16:20 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:16:40 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:17:00 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:17:21 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:17:41 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:18:01 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:18:22 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:18:42 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:19:02 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:19:22 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:19:43 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:20:03 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:20:23 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:20:43 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:21:04 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:21:24 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:21:46 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:22:06 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:22:26 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:22:46 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:23:07 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:23:27 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:23:49 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:24:04 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:24:09 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:24:11 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:24:17 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:24:22 - saveTask - array (
+  'task' => 'PWR_ON',
+)
+03.05.2018 01:24:30 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:24:49 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:24:53 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:24:56 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:25:09 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:25:13 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:25:33 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:25:40 - saveTask - array (
+  'task' => 'SHUTDOWN',
+)
+03.05.2018 01:25:54 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:26:17 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:26:39 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:26:41 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:27:02 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:27:22 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:27:43 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:28:03 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:28:23 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:28:44 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:29:04 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:29:24 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:29:45 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:30:05 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:30:25 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:30:45 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:31:06 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:31:26 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:31:46 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:32:07 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:32:27 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:32:47 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:33:07 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:33:28 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:33:48 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:34:08 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:34:29 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:34:49 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:35:14 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:35:35 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:35:55 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:36:15 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:36:35 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:36:56 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:37:16 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:37:36 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:37:43 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:37:56 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:38:17 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:38:37 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:38:57 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:39:17 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:39:38 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:39:58 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:39:58 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:40:18 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:40:38 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:41:00 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:41:20 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:41:41 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:42:01 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:42:21 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:42:41 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:43:02 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:43:22 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:43:42 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:44:02 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:44:23 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:44:44 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:45:04 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:45:24 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:45:40 - saveTask - array (
+  'task' => 'PWR_ON',
+)
+03.05.2018 01:45:44 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:46:08 - endpoint - array (
+  'status' => '0',
+)
+03.05.2018 01:46:31 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:46:53 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:47:16 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:47:39 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:48:02 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:48:24 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:48:26 - saveTask - array (
+  'task' => 'OK',
+)
+03.05.2018 01:48:47 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:49:07 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:49:28 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:49:48 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:50:08 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:50:28 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:50:49 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:51:09 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:51:29 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:51:49 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:52:10 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:52:30 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:52:50 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:53:11 - endpoint - array (
+  'status' => '1',
+)
+03.05.2018 01:53:31 - endpoint - array (
+  'status' => '1',
+)
