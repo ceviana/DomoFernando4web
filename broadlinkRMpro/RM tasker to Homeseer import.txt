@@ -1,0 +1,75 @@
+'This is an import script for Homeseer- RM Tasker Plugin writtten by Roger Blomkvist(rogerbl@hotmail.com).
+'The script will import to Homeseer(HS3) all your predefined settings in RM Tasker plugin(Android).
+'RM Tasker plugin works with many (but not all) Broadlink devices.
+
+Sub main()
+Dim s
+Dim i 
+Dim linje 
+Dim lengde 
+Dim TestPos 
+dim ev
+dim y
+dim antall
+dim tegn 
+dim Array
+dim arrCount
+dim Navn 
+dim Kommando
+Dim dv
+Dim Value
+Dim Ref
+
+
+hs.WriteLog "Starting!", 0 
+'replace the ip adress and port with your own(its the adress of your RM Tasker host)
+const server_url = "http://192.168.100.165:9876/codes"
+tegn = hs.URLAction(server_url, "POST", data, headers)
+s = Mid(tegn,1, len(tegn)-1)
+Array = Split(s,",")
+arrCount = uBound(Array) + 1
+antall = arrCount/14
+
+for i = 0 to arrCount -14
+ 
+tegn= Split( Array(11 + i),":")
+Navn= Mid(tegn(0),1,len(tegn(0))-1)
+linje= Mid(tegn(1),2,len(tegn(1))-2)
+tegn=Split( linje," • ")
+Navn = tegn(0)
+Kommando = tegn(1)
+
+dvRef = hs.GetDeviceRefByName(Navn)
+
+if dvRef <= 0 then
+   dv = hs.NewDeviceEx(Navn)
+  hs.WriteLog "Created device: " + Navn1, 0
+else
+ dv = hs.GetDeviceByRef(dvRef)
+ 
+EvRef = hs.GetEventRefByName(Navn)
+
+tegn = Replace(Array(13 + i),"\u003d","=")
+linje = Replace(tegn,"\u0026","&")
+tegn =  Replace(linje,"}","")
+Navn1 = Mid(tegn,11,len(tegn)-1)
+
+if EvRef <= 0 then
+ EvRef = hs.NewEventEx(Kommando, Navn,"Kommando")
+hs.WriteLog "Created Event: " + Navn + " " + Kommando, 0
+linje = "&hs.URLAction(" + Navn1 +", "+ chr(34) + "POST" + chr(34) +", data, headers)"
+
+hs.AddActionRunScript EvRef,"",linje,""
+
+end if
+
+End If
+
+
+i = i + 13
+next
+hs.WriteLog "Finished!", 0 
+End Sub
+'Now you have to go into every event and move the data in the <sub or function> box to the <immediate script command> box.
+'This is the only way I found to import the URLAction command. If anyone else know a better way please let me know.
+'After this is don your events should work. Have fun!
