@@ -95,16 +95,16 @@
 #define POLL_INTERVAL     20000
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 #define SERIAL_BAUD 115200
-#define DATA_ATUAL  "02/05/2018"  // MODIFICAR p/ DATA ULTIMA ATUALIZACAO
+#define DATA_ATUAL  "270518"  // MODIFICAR p/ DATA ULTIMA ATUALIZACAO
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // Wi-Fi network settings
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 //const char* ssid = "DARK2";
 //const char* password = "2003311200300";
-//const char* ssid = "ESP_GUEST";
-//const char* password = "01234567890";
-const char* ssid = "VIANA";
-const char* password = "15373420883";
+const char* ssid = "ESP_GUEST";
+const char* password = "01234567890";
+//const char* ssid = "VIANA";
+//const char* password = "15373420883";
 // URL to task providing script, that will be polled each POLL_INTERVAL ms.
 // The endpoint script should return one of the following strings as plain text
 // in order to execute desired actions: PWR_ON, PWR_OFF, RESET, SHUTDOWN
